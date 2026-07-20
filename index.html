@@ -85,6 +85,20 @@
     font-family: var(--label); font-size: 0.8rem; letter-spacing: 0.04em;
     color: var(--ink-3); font-style: italic;
   }
+  .sparkle-title { display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+  .spark { font-size: 1.3rem; line-height: 1; display: inline-block; animation: twinkle 2.6s ease-in-out infinite; }
+  .spark.b { animation-delay: 1.3s; }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.35; transform: scale(0.85) rotate(-6deg); }
+    50%      { opacity: 1;    transform: scale(1.15) rotate(6deg); }
+  }
+  .romance {
+    font-family: var(--display); font-style: italic; font-size: 1.02rem;
+    line-height: 1.6; color: var(--ink-2); max-width: 30rem; margin-top: 0.35rem;
+    text-wrap: balance;
+  }
+  .romance .amp { color: var(--red); font-style: normal; }
+  @media (prefers-reduced-motion: reduce) { .spark { animation: none; opacity: 0.8; } }
 
   /* do-first banner */
   .banner {
@@ -207,6 +221,16 @@
   td .place { font-weight: 700; color: var(--navy); }
   .diff { font-size: 0.95rem; }
 
+  .extras { display: flex; flex-direction: column; gap: 0.85rem; }
+  .extra { background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--navy); border-radius: 8px; padding: 0.9rem 1.1rem; }
+  .extra h3 { font-family: var(--body); font-size: 1rem; font-weight: 700; color: var(--navy); display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.3rem; }
+  .extra h3 .em { font-size: 1.05rem; }
+  .extra p { font-size: 0.9rem; color: var(--ink-2); }
+  .extra .pick { color: var(--ink); font-weight: 700; }
+  .extra ul { list-style: none; margin-top: 0.4rem; display: flex; flex-direction: column; gap: 0.4rem; }
+  .extra li { font-size: 0.88rem; color: var(--ink-2); padding-left: 0.9rem; position: relative; }
+  .extra li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; background: var(--red); border-radius: 50%; }
+  .extra li b { color: var(--navy); }
   footer { border-top: 1px solid var(--rule); padding-top: 1.2rem; font-size: 0.8rem; color: var(--ink-3); display: flex; flex-direction: column; gap: 0.6rem; }
   .progress { font-family: var(--label); font-weight: 700; font-size: 0.75rem; color: var(--navy); display: flex; align-items: center; gap: 0.55rem; }
   .progress .bar { flex: 1; height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; max-width: 12rem; }
@@ -224,8 +248,9 @@
   <header class="mast">
     <div class="wordmark">Diata Health</div>
     <div class="rule-mark"></div>
-    <h1>Paris</h1>
+    <div class="sparkle-title"><span class="spark">✨</span><h1>Paris</h1><span class="spark b">✨</span></div>
     <div class="eyebrow">Caroline &amp; Christian · Thursday 30 July – Monday 3 August 2026</div>
+    <p class="romance">Mom <span class="amp">&amp;</span> Dad's romantic escape — four days, just the two of them. Monet's gardens and candlelight, wine by the Seine and a boat at dusk, Mass at Notre-Dame and long lunches with nowhere to rush off to. A little love letter to Paris, and to each other. ✨</p>
   </header>
 
   <div class="banner">
@@ -386,7 +411,39 @@
   </section>
 
   <section>
-    <h2><span class="num">Part 2</span> Still to do</h2>
+    <h2><span class="num">Part 2</span> Must-dos &amp; little joys</h2>
+    <div class="extras">
+      <div class="extra">
+        <h3><span class="em">✨</span> See the Eiffel Tower sparkle</h3>
+        <p>Every night it glitters for five minutes on the hour — and in midsummer the first show is around <b>11 PM</b>. Your Thursday boat glides right past it. To catch the twinkle another night, watch from <span class="pick">Pont de Bir-Hakeim</span>, where the arches frame the tower and the crowds thin out.</p>
+      </div>
+      <div class="extra">
+        <h3><span class="em">🥐</span> The croissant crawl</h3>
+        <p>Three worth every calorie:</p>
+        <ul>
+          <li><b>Tout Autour du Pain</b> — in the Marais, steps from home base. Your everyday spot.</li>
+          <li><b>La Maison d'Isabelle</b> — Latin Quarter, two minutes from Notre-Dame. Famously the best croissant in the city, and just €1.40 — grab one Sunday around Mass.</li>
+          <li><b>Du Pain et des Idées</b> — by the Canal Saint-Martin. A 24-hour-rise legend; pair it with a canal walk.</li>
+        </ul>
+      </div>
+      <div class="extra">
+        <h3><span class="em">🚶</span> Long walks, the right way</h3>
+        <p>You love to walk — so do it when Paris is coolest: <b>before noon or after 6 PM</b>, never the 2 PM heat. The best routes:</p>
+        <ul>
+          <li><b>Marais → Île Saint-Louis → Notre-Dame</b> along the river — your Sunday morning.</li>
+          <li><b>Berges de Seine</b>, the car-free riverbank, at golden hour.</li>
+          <li><b>Canal Saint-Martin</b> — leafy, local, and croissant-adjacent.</li>
+        </ul>
+      </div>
+      <div class="extra">
+        <h3><span class="em">🍫</span> One sweet splurge</h3>
+        <p>A box of macarons from <span class="pick">Pierre Hermé</span> to split on a bench in the Place des Vosges. That's the whole activity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">Part 3</span> Still to do</h2>
     <div class="lists">
 
       <div class="list-group">
@@ -417,7 +474,7 @@
   </section>
 
   <section>
-    <h2><span class="num">Part 3</span> Travel at a glance</h2>
+    <h2><span class="num">Part 4</span> Travel at a glance</h2>
     <div class="table-scroll">
       <table>
         <thead>
