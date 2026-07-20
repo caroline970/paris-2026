@@ -2,45 +2,19 @@
 
 <style>
   :root {
-    /* Diata brand — white ground, navy primary, accent blue, red used sparingly */
-    --ground: #FFFFFF;
-    --surface: #FFFFFF;
-    --panel: #F4F7FC;
-    --ink: #0B0B0B;
-    --ink-2: #3A3F4A;
-    --ink-3: #6B7280;
-    --rule: #DEE5F1;
-    --rule-soft: #EAEFF7;
-    --navy: #20307F;
-    --navy-2: #33429A;
-    --accent: #D4E5F6;
-    --accent-deep: #B8D2ee;
-    --red: #D02E2E;
-    --red-wash: #FBE7E7;
-    --done: #20307F;
-
+    --ground: #FFFFFF; --surface: #FFFFFF; --panel: #F4F7FC; --ink: #0B0B0B;
+    --ink-2: #3A3F4A; --ink-3: #6B7280; --rule: #DEE5F1; --rule-soft: #EAEFF7;
+    --navy: #20307F; --navy-2: #33429A; --accent: #D4E5F6; --accent-deep: #B8D2ee;
+    --red: #D02E2E; --red-wash: #FBE7E7; --done: #20307F;
     --display: "Libre Baskerville", "The Seasons", Georgia, "Times New Roman", serif;
     --body: "Lora", Georgia, "Times New Roman", serif;
     --label: "Lora", Georgia, serif;
   }
-
   @media (prefers-color-scheme: dark) {
     :root {
-      --ground: #0C1024;
-      --surface: #141A38;
-      --panel: #1A2145;
-      --ink: #EEF2FB;
-      --ink-2: #B7C0DA;
-      --ink-3: #8791B0;
-      --rule: #29315C;
-      --rule-soft: #20264a;
-      --navy: #A9BCF2;
-      --navy-2: #C2D0F8;
-      --accent: #2B356B;
-      --accent-deep: #37427F;
-      --red: #F07B7B;
-      --red-wash: #2C1622;
-      --done: #A9BCF2;
+      --ground:#0C1024; --surface:#141A38; --panel:#1A2145; --ink:#EEF2FB; --ink-2:#B7C0DA;
+      --ink-3:#8791B0; --rule:#29315C; --rule-soft:#20264a; --navy:#A9BCF2; --navy-2:#C2D0F8;
+      --accent:#2B356B; --accent-deep:#37427F; --red:#F07B7B; --red-wash:#2C1622; --done:#A9BCF2;
     }
   }
   :root[data-theme="dark"] {
@@ -54,153 +28,87 @@
     --accent:#D4E5F6; --accent-deep:#B8D2ee; --red:#D02E2E; --red-wash:#FBE7E7; --done:#20307F;
   }
 
-  body {
-    background: var(--ground);
-    color: var(--ink);
-    font-family: var(--body);
-    font-size: 16px;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap {
-    max-width: 44rem;
-    margin: 0 auto;
-    padding: 2.25rem 1.1rem 4rem;
-    display: flex; flex-direction: column; gap: 2rem;
-  }
+  body { background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 2.25rem 1.1rem 4rem; display: flex; flex-direction: column; gap: 2rem; }
 
-  /* masthead */
   .mast { display: flex; flex-direction: column; gap: 0.55rem; text-align: center; align-items: center; }
-  .wordmark {
-    font-family: var(--display); font-weight: 700; font-size: 0.72rem;
-    letter-spacing: 0.28em; text-transform: uppercase; color: var(--navy);
-  }
+  .wordmark { font-family: var(--display); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--navy); }
   .rule-mark { width: 2.5rem; height: 2px; background: var(--red); border-radius: 2px; }
-  h1 {
-    font-family: var(--display); font-weight: 400;
-    font-size: clamp(2.4rem, 9vw, 3.5rem); line-height: 1;
-    letter-spacing: -0.01em; color: var(--navy);
-  }
-  .eyebrow {
-    font-family: var(--label); font-size: 0.8rem; letter-spacing: 0.04em;
-    color: var(--ink-3); font-style: italic;
-  }
+  h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2.4rem, 9vw, 3.5rem); line-height: 1; letter-spacing: -0.01em; color: var(--navy); }
+  .eyebrow { font-family: var(--label); font-size: 0.8rem; letter-spacing: 0.04em; color: var(--ink-3); font-style: italic; }
   .sparkle-title { display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
   .spark { font-size: 1.3rem; line-height: 1; display: inline-block; animation: twinkle 2.6s ease-in-out infinite; }
   .spark.b { animation-delay: 1.3s; }
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.35; transform: scale(0.85) rotate(-6deg); }
-    50%      { opacity: 1;    transform: scale(1.15) rotate(6deg); }
-  }
-  .romance {
-    font-family: var(--display); font-style: italic; font-size: 1.02rem;
-    line-height: 1.6; color: var(--ink-2); max-width: 30rem; margin-top: 0.35rem;
-    text-wrap: balance;
-  }
+  @keyframes twinkle { 0%,100% { opacity: 0.35; transform: scale(0.85) rotate(-6deg); } 50% { opacity: 1; transform: scale(1.15) rotate(6deg); } }
+  .romance { font-family: var(--display); font-style: italic; font-size: 1.02rem; line-height: 1.6; color: var(--ink-2); max-width: 30rem; margin-top: 0.35rem; text-wrap: balance; }
   .romance .amp { color: var(--red); font-style: normal; }
   @media (prefers-reduced-motion: reduce) { .spark { animation: none; opacity: 0.8; } }
 
-  /* do-first banner */
-  .banner {
-    background: var(--red-wash); border: 1px solid var(--red); border-radius: 6px;
-    padding: 0.9rem 1rem; display: flex; gap: 0.6rem; align-items: flex-start;
-    font-size: 0.92rem; color: var(--ink-2);
-  }
+  .banner { background: var(--red-wash); border: 1px solid var(--red); border-radius: 6px; padding: 0.9rem 1rem; display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.92rem; color: var(--ink-2); }
   .banner b { color: var(--red); }
   .banner .ic { flex: none; }
 
-  h2 {
-    font-family: var(--display); font-weight: 400; font-size: 1.55rem;
-    color: var(--navy); display: flex; align-items: baseline; gap: 0.6rem;
-  }
-  h2 .num {
-    font-family: var(--label); font-size: 0.72rem; letter-spacing: 0.06em;
-    color: var(--ink-3); text-transform: uppercase; font-style: italic;
-  }
+  h2 { font-family: var(--display); font-weight: 400; font-size: 1.55rem; color: var(--navy); display: flex; align-items: baseline; gap: 0.6rem; }
+  h2 .num { font-family: var(--label); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--ink-3); text-transform: uppercase; font-style: italic; }
 
-  /* home base strip */
-  .homebase {
-    background: var(--panel); border: 1px solid var(--rule); border-radius: 6px;
-    padding: 0.75rem 1rem; font-size: 0.9rem; color: var(--ink-2);
-    display: flex; gap: 0.55rem; align-items: baseline; flex-wrap: wrap;
-  }
+  .homebase { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 0.75rem 1rem; font-size: 0.9rem; color: var(--ink-2); display: flex; gap: 0.55rem; align-items: baseline; flex-wrap: wrap; }
   .homebase b { color: var(--navy); }
   .homebase .todo { color: var(--red); font-style: italic; }
 
-  /* day cards */
   .days { display: flex; flex-direction: column; gap: 1rem; }
   .day { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
-  .day-head {
-    display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem;
-    padding: 0.9rem 1.1rem; background: var(--accent); border-bottom: 1px solid var(--rule); flex-wrap: wrap;
-  }
-  .day-when {
-    font-family: var(--label); font-size: 0.72rem; letter-spacing: 0.06em;
-    text-transform: uppercase; color: var(--navy); font-weight: 700;
-  }
+  .day-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; padding: 0.9rem 1.1rem; background: var(--accent); border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+  .day-when { font-family: var(--label); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--navy); font-weight: 700; }
   .day-title { font-family: var(--display); font-size: 1.3rem; line-height: 1.05; color: var(--ink); }
   .day.marquee .day-head { background: var(--navy); }
   .day.marquee .day-when { color: #fff; }
   .day.marquee .day-title { color: #fff; }
 
   .day-body { padding: 0.3rem 1.1rem 0.9rem; }
-  .row {
-    display: grid; grid-template-columns: 4.6rem 1fr; gap: 0.85rem;
-    padding: 0.8rem 0; border-top: 1px solid var(--rule-soft); align-items: baseline;
-  }
+  .row { display: grid; grid-template-columns: 4.6rem 1fr; gap: 0.85rem; padding: 0.8rem 0; border-top: 1px solid var(--rule-soft); align-items: baseline; }
   .row:first-child { border-top: 0; }
-  .when {
-    font-family: var(--label); font-size: 0.8rem; font-weight: 700; color: var(--navy);
-    font-variant-numeric: tabular-nums; white-space: nowrap; padding-top: 0.05rem;
-  }
-  .what h3 { font-family: var(--body); font-size: 0.98rem; font-weight: 700; margin-bottom: 0.15rem; }
+  .when { font-family: var(--label); font-size: 0.8rem; font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; white-space: nowrap; padding-top: 0.05rem; }
+  .what h3 { font-family: var(--body); font-size: 0.98rem; font-weight: 700; margin-bottom: 0.1rem; }
   .what p { font-size: 0.9rem; color: var(--ink-2); }
   .what p + p { margin-top: 0.25rem; }
 
-  .travel {
-    display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0.35rem;
-    font-size: 0.82rem; color: var(--navy-2);
-  }
-  .travel .lbl {
-    font-family: var(--label); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em;
-    text-transform: uppercase; background: var(--accent); color: var(--navy);
-    padding: 0.12rem 0.45rem; border-radius: 4px; flex: none;
-  }
-  .confirm {
-    display: inline-block; font-size: 0.72rem; font-style: italic; color: var(--red); margin-top: 0.2rem;
-  }
+  /* venue links + addresses */
+  a.vlink { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--accent-deep); }
+  a.vlink:hover { border-bottom-color: var(--navy); }
+  a.vlink:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; border-radius: 2px; }
+  .addr { display: block; font-size: 0.78rem; color: var(--ink-3); margin: 0.05rem 0 0.25rem; }
+  .addr a { color: var(--ink-3); text-decoration: none; }
+  .addr a:hover { color: var(--navy); }
 
-  .tag {
-    display: inline-block; font-family: var(--label); font-size: 0.64rem; font-weight: 700;
-    letter-spacing: 0.04em; text-transform: uppercase; padding: 0.12rem 0.45rem;
-    border-radius: 4px; margin-left: 0.4rem; vertical-align: 0.08em; white-space: nowrap;
-  }
+  .travel { display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0.35rem; font-size: 0.82rem; color: var(--navy-2); flex-wrap: wrap; }
+  .travel .lbl { font-family: var(--label); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; background: var(--accent); color: var(--navy); padding: 0.12rem 0.45rem; border-radius: 4px; flex: none; }
+  .travel a { color: var(--navy-2); text-decoration: underline; text-underline-offset: 2px; }
+  .confirm { display: inline-block; font-size: 0.74rem; font-style: italic; color: var(--red); margin-top: 0.25rem; font-weight: 700; }
+
+  .tag { display: inline-block; font-family: var(--label); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.12rem 0.45rem; border-radius: 4px; margin-left: 0.4rem; vertical-align: 0.08em; white-space: nowrap; }
   .tag.free { background: var(--accent); color: var(--navy); }
   .tag.paid { background: var(--navy); color: #fff; }
   .day.marquee .tag.paid { background: #fff; color: var(--navy); }
 
-  /* checklist */
+  .extras { display: flex; flex-direction: column; gap: 0.85rem; }
+  .extra { background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--navy); border-radius: 8px; padding: 0.9rem 1.1rem; }
+  .extra h3 { font-family: var(--body); font-size: 1rem; font-weight: 700; color: var(--navy); display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.3rem; }
+  .extra h3 .em { font-size: 1.05rem; }
+  .extra p { font-size: 0.9rem; color: var(--ink-2); }
+  .extra .pick { color: var(--ink); font-weight: 700; }
+  .extra ul { list-style: none; margin-top: 0.4rem; display: flex; flex-direction: column; gap: 0.55rem; }
+  .extra li { font-size: 0.88rem; color: var(--ink-2); padding-left: 0.9rem; position: relative; }
+  .extra li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; background: var(--red); border-radius: 50%; }
+  .extra li .addr { margin-top: 0.1rem; }
+
   .lists { display: flex; flex-direction: column; gap: 1.25rem; }
   .list-group { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 0.3rem 1.1rem 0.6rem; }
-  .glabel {
-    font-family: var(--label); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--navy); padding: 0.85rem 0 0.5rem;
-    border-bottom: 2px solid var(--accent); margin-bottom: 0.2rem;
-  }
+  .glabel { font-family: var(--label); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); padding: 0.85rem 0 0.5rem; border-bottom: 2px solid var(--accent); margin-bottom: 0.2rem; }
   .check { display: flex; gap: 0.7rem; align-items: flex-start; padding: 0.6rem 0; border-top: 1px solid var(--rule-soft); cursor: pointer; }
   .glabel + .check { border-top: 0; }
-  .check input {
-    appearance: none; -webkit-appearance: none; flex: none; width: 1.15rem; height: 1.15rem;
-    margin-top: 0.1rem; border: 1.5px solid var(--navy); border-radius: 4px; background: transparent;
-    cursor: pointer; position: relative; transition: background .15s, border-color .15s;
-  }
+  .check input { appearance: none; -webkit-appearance: none; flex: none; width: 1.15rem; height: 1.15rem; margin-top: 0.1rem; border: 1.5px solid var(--navy); border-radius: 4px; background: transparent; cursor: pointer; position: relative; transition: background .15s, border-color .15s; }
   .check input:checked { background: var(--done); border-color: var(--done); }
-  .check input:checked::after {
-    content: ""; position: absolute; left: 0.34rem; top: 0.13rem; width: 0.28rem; height: 0.56rem;
-    border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg);
-  }
-  :root[data-theme="dark"] .check input:checked::after,
-  .check input:checked::after { border-color: var(--ground); }
+  .check input:checked::after { content: ""; position: absolute; left: 0.34rem; top: 0.13rem; width: 0.28rem; height: 0.56rem; border: solid var(--ground); border-width: 0 2px 2px 0; transform: rotate(45deg); }
   .check input:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
   .step { font-family: var(--label); font-size: 0.78rem; font-weight: 700; color: var(--red); flex: none; padding-top: 0.15rem; width: 1rem; font-variant-numeric: tabular-nums; }
   .check-text { font-size: 0.93rem; }
@@ -209,37 +117,21 @@
   .check input:checked ~ .check-text .lead { color: var(--ink-3); text-decoration: line-through; }
   .check input:checked ~ .check-text .sub { color: var(--ink-3); }
 
-  /* travel table */
   .table-scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; }
   table { border-collapse: collapse; width: 100%; font-size: 0.86rem; min-width: 32rem; background: var(--surface); }
   th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--rule-soft); }
-  thead th {
-    font-family: var(--label); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em;
-    text-transform: uppercase; color: var(--navy); background: var(--accent);
-  }
+  thead th { font-family: var(--label); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--navy); background: var(--accent); }
   tbody tr:last-child td { border-bottom: 0; }
   td .place { font-weight: 700; color: var(--navy); }
   .diff { font-size: 0.95rem; }
 
-  .extras { display: flex; flex-direction: column; gap: 0.85rem; }
-  .extra { background: var(--surface); border: 1px solid var(--rule); border-left: 4px solid var(--navy); border-radius: 8px; padding: 0.9rem 1.1rem; }
-  .extra h3 { font-family: var(--body); font-size: 1rem; font-weight: 700; color: var(--navy); display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.3rem; }
-  .extra h3 .em { font-size: 1.05rem; }
-  .extra p { font-size: 0.9rem; color: var(--ink-2); }
-  .extra .pick { color: var(--ink); font-weight: 700; }
-  .extra ul { list-style: none; margin-top: 0.4rem; display: flex; flex-direction: column; gap: 0.4rem; }
-  .extra li { font-size: 0.88rem; color: var(--ink-2); padding-left: 0.9rem; position: relative; }
-  .extra li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; background: var(--red); border-radius: 50%; }
-  .extra li b { color: var(--navy); }
   footer { border-top: 1px solid var(--rule); padding-top: 1.2rem; font-size: 0.8rem; color: var(--ink-3); display: flex; flex-direction: column; gap: 0.6rem; }
   .progress { font-family: var(--label); font-weight: 700; font-size: 0.75rem; color: var(--navy); display: flex; align-items: center; gap: 0.55rem; }
   .progress .bar { flex: 1; height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; max-width: 12rem; }
   .progress .fill { height: 100%; width: 0; background: var(--navy); transition: width .25s; }
   .foot-mark { font-family: var(--display); font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy); font-size: 0.68rem; }
 
-  @media (max-width: 30rem) {
-    .row { grid-template-columns: 3.8rem 1fr; gap: 0.6rem; }
-  }
+  @media (max-width: 30rem) { .row { grid-template-columns: 3.8rem 1fr; gap: 0.6rem; } }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -259,7 +151,7 @@
   </div>
 
   <div class="homebase">
-    🏠 <b>Home base:</b> Sarah &amp; Boris's apartment · <span class="todo">address to confirm with Sarah</span>
+    🏠 <b>Home base:</b> Sarah &amp; Boris's apartment · <span class="todo">↳ get their address from Sarah</span>
   </div>
 
   <section>
@@ -267,10 +159,7 @@
     <div class="days">
 
       <article class="day">
-        <div class="day-head">
-          <span class="day-when">Thu 30 July · Arrive</span>
-          <span class="day-title">Gardens, wine &amp; the boat</span>
-        </div>
+        <div class="day-head"><span class="day-when">Thu 30 July · Arrive</span><span class="day-title">Gardens, wine &amp; the boat</span></div>
         <div class="day-body">
           <div class="row">
             <div class="when">Afternoon</div>
@@ -278,24 +167,33 @@
           </div>
           <div class="row">
             <div class="when">5:30 PM</div>
-            <div class="what"><h3>Stroll the Jardin des Plantes</h3><p>Sarah's suggestion — a wander through the gardens in the 5th before drinks.</p></div>
+            <div class="what">
+              <h3><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Jardin+des+Plantes+57+Rue+Cuvier+75005+Paris" target="_blank" rel="noopener">Stroll the Jardin des Plantes</a></h3>
+              <span class="addr">57 Rue Cuvier, 75005 Paris</span>
+              <p>Sarah's suggestion — a wander through the gardens in the 5th before drinks.</p>
+            </div>
           </div>
           <div class="row">
             <div class="when">6:30 PM</div>
-            <div class="what"><h3>Drinks at Bibie</h3><p>A wine bar &amp; café under a glass conservatory in the 5th, near Place Monge.</p></div>
+            <div class="what">
+              <h3><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Bibie+7+Rue+Lacepede+75005+Paris" target="_blank" rel="noopener">Drinks at Bibie</a></h3>
+              <span class="addr">7 Rue Lacépède, 75005 Paris</span>
+              <p>A wine bar &amp; café under a glass conservatory in the 5th, near Place Monge.</p>
+            </div>
           </div>
           <div class="row">
             <div class="when">8:30 PM</div>
             <div class="what">
               <h3>Private boat tour on the Seine</h3>
               <p>With Sarah, Boris, and their friends Hana &amp; Charles — a 6-person boat.</p>
-              <span class="confirm">↳ confirm the boat time with Sarah &amp; Boris</span>
+              <span class="confirm">↳ confirm the boat time &amp; meeting point with Sarah &amp; Boris</span>
             </div>
           </div>
           <div class="row">
             <div class="when">Dinner</div>
             <div class="what">
-              <h3>Square Trousseau <span class="tag free">Suggested</span></h3>
+              <h3><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Square+Trousseau+1+Rue+Antoine+Vollon+75012+Paris" target="_blank" rel="noopener">Square Trousseau</a> <span class="tag free">Suggested</span></h3>
+              <span class="addr">1 Rue Antoine Vollon, 75012 Paris</span>
               <p>Sarah floated dinner here — the bistro near the Marché d'Aligre you've been to before.</p>
               <span class="confirm">↳ confirm the night with Sarah &amp; Boris</span>
             </div>
@@ -304,43 +202,53 @@
       </article>
 
       <article class="day">
-        <div class="day-head">
-          <span class="day-when">Fri 31 July · Day trip</span>
-          <span class="day-title">Monet, then the Seine</span>
-        </div>
+        <div class="day-head"><span class="day-when">Fri 31 July · Day trip</span><span class="day-title">Monet, then the Seine</span></div>
         <div class="day-body">
           <div class="row">
             <div class="when">7:30 AM</div>
             <div class="what">
               <h3>First train to Giverny</h3>
               <p>Go early — the village is small and the tour buses arrive mid-morning (Sarah's advice too).</p>
-              <div class="travel"><span class="lbl">Travel</span> Saint-Lazare → Vernon (~50 min), then the €5 shuttle up.</div>
+              <div class="travel"><span class="lbl">Travel</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=Gare+Saint-Lazare+Paris" target="_blank" rel="noopener">Saint-Lazare</a> → Vernon (~50 min), then the €5 shuttle up.</div>
             </div>
           </div>
           <div class="row">
             <div class="when">9:00 AM</div>
-            <div class="what"><h3>Monet's house &amp; gardens <span class="tag paid">€13</span></h3><p>Two to three hours among the water lilies and the famous garden.</p></div>
+            <div class="what">
+              <h3><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Fondation+Claude+Monet+84+Rue+Claude+Monet+27620+Giverny" target="_blank" rel="noopener">Monet's house &amp; gardens</a> <span class="tag paid">€13</span></h3>
+              <span class="addr">84 Rue Claude Monet, 27620 Giverny</span>
+              <p>Two to three hours among the water lilies and the famous garden.</p>
+            </div>
           </div>
           <div class="row">
             <div class="when">4:00 PM</div>
-            <div class="what"><h3>Swim in the Seine <span class="tag free">Free</span></h3><p>The Louis-Philippe site at the edge of the Marais — lifeguarded, open daily through 30 Aug.</p></div>
+            <div class="what">
+              <h3><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Pont+Louis-Philippe+Seine+75004+Paris" target="_blank" rel="noopener">Swim in the Seine</a> <span class="tag free">Free</span></h3>
+              <span class="addr">Pont Louis-Philippe, 75004 Paris — Seine, opposite Île Saint-Louis (open 8am–6pm)</span>
+              <p>The Louis-Philippe site at the edge of the Marais — lifeguarded, open daily through 30 Aug.</p>
+            </div>
           </div>
           <div class="row">
-            <div class="when">8:00 PM</div>
-            <div class="what"><h3>Drinks (or dinner) with Maya</h3><p>Let Maya pick the spot — she's local. Keep it easy after the early start.</p></div>
+            <div class="when">Evening</div>
+            <div class="what">
+              <h3>Drinks (or dinner) with Maya</h3>
+              <p>In the Marais — Maya's local, so let her choose the spot.</p>
+              <span class="confirm">↳ Maya's picking the place — add it here once she does</span>
+            </div>
           </div>
         </div>
       </article>
 
       <article class="day marquee">
-        <div class="day-head">
-          <span class="day-when">Sat 1 Aug · Marquee night</span>
-          <span class="day-title">Museums, then candlelight</span>
-        </div>
+        <div class="day-head"><span class="day-when">Sat 1 Aug · Marquee night</span><span class="day-title">Museums, then candlelight</span></div>
         <div class="day-body">
           <div class="row">
             <div class="when">9:30 AM</div>
-            <div class="what"><h3>Orangerie, then Orsay <span class="tag paid">€20 both</span></h3><p>Monet's Water Lilies rooms at the Orangerie; Renoir &amp; the Impressionists at Orsay. Buy the combo at the Orangerie desk.</p></div>
+            <div class="what">
+              <h3><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Musee+de+l+Orangerie+75001+Paris" target="_blank" rel="noopener">Orangerie</a>, then <a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Musee+d+Orsay+75007+Paris" target="_blank" rel="noopener">Orsay</a> <span class="tag paid">€20 both</span></h3>
+              <span class="addr">Orangerie: Jardin des Tuileries, 75001 · Orsay: Esplanade Valéry Giscard d'Estaing, 75007</span>
+              <p>Monet's Water Lilies rooms at the Orangerie; Renoir &amp; the Impressionists at Orsay. Buy the combo at the Orangerie desk.</p>
+            </div>
           </div>
           <div class="row">
             <div class="when">1:00 PM</div>
@@ -349,28 +257,24 @@
           <div class="row">
             <div class="when">4:00 PM</div>
             <div class="what">
-              <h3>Out to Vaux-le-Vicomte <span class="tag paid">€22</span></h3>
+              <h3><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Chateau+de+Vaux-le-Vicomte+77950+Maincy" target="_blank" rel="noopener">Vaux-le-Vicomte</a> <span class="tag paid">€22</span></h3>
+              <span class="addr">77950 Maincy</span>
               <p>Candlelit evening — 2,000 candles, champagne bar, stilt walkers, fireworks to close.</p>
-              <div class="travel"><span class="lbl">Travel</span> Gare de Lyon → Melun (~25 min), then the Châteaubus shuttle.</div>
+              <div class="travel"><span class="lbl">Travel</span> <a href="https://www.google.com/maps/search/?api=1&amp;query=Gare+de+Lyon+Paris" target="_blank" rel="noopener">Gare de Lyon</a> → <a href="https://www.google.com/maps/search/?api=1&amp;query=Gare+de+Melun+77000+Melun" target="_blank" rel="noopener">Melun</a> (~25 min), then the Châteaubus shuttle.</div>
+              <span class="confirm">↳ return transport must be confirmed before booking</span>
             </div>
-          </div>
-          <div class="row">
-            <div class="when">~Midnight</div>
-            <div class="what"><h3>Back to Paris</h3><span class="confirm">↳ return transport must be confirmed before booking</span></div>
           </div>
         </div>
       </article>
 
       <article class="day">
-        <div class="day-head">
-          <span class="day-when">Sun 2 Aug · Slow day</span>
-          <span class="day-title">Mass &amp; a long lunch</span>
-        </div>
+        <div class="day-head"><span class="day-when">Sun 2 Aug · Slow day</span><span class="day-title">Mass &amp; a long lunch</span></div>
         <div class="day-body">
           <div class="row">
             <div class="when">9:30 AM</div>
             <div class="what">
-              <h3>Arrive at Notre-Dame</h3>
+              <h3>Arrive at <a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Cathedrale+Notre-Dame+de+Paris+75004+Paris" target="_blank" rel="noopener">Notre-Dame</a></h3>
+              <span class="addr">6 Parvis Notre-Dame – Pl. Jean-Paul II, 75004 Paris</span>
               <p>Worshippers' entrance is opposite the Last Judgement portal — get in line ~20 min early.</p>
               <div class="travel"><span class="lbl">Travel</span> Walk from the Marais, ~10 min across Pont Marie.</div>
             </div>
@@ -381,11 +285,19 @@
           </div>
           <div class="row">
             <div class="when">1:00 PM</div>
-            <div class="what"><h3>A long lunch</h3><p>Maya's backup slot if Friday moves. Let it run.</p></div>
+            <div class="what">
+              <h3>A long lunch with Maya</h3>
+              <p>Let it run — the whole afternoon if you like.</p>
+              <span class="confirm">↳ Maya sent some options — pick one &amp; add it here</span>
+            </div>
           </div>
           <div class="row">
             <div class="when">3:30 PM</div>
-            <div class="what"><h3>Sainte-Chapelle <span class="tag paid">€13</span></h3><p>Recommended: the jewel-box chapel two minutes from Notre-Dame — fifteen medieval stained-glass windows that light up the whole room. A perfect close to the day.</p></div>
+            <div class="what">
+              <h3><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Sainte-Chapelle+10+Boulevard+du+Palais+75001+Paris" target="_blank" rel="noopener">Sainte-Chapelle</a> <span class="tag paid">€13</span></h3>
+              <span class="addr">10 Boulevard du Palais, 75001 Paris</span>
+              <p>The jewel-box chapel two minutes from Notre-Dame — fifteen medieval stained-glass windows that light up the whole room. A perfect close to the day.</p>
+            </div>
           </div>
           <div class="row">
             <div class="when">Evening</div>
@@ -395,10 +307,7 @@
       </article>
 
       <article class="day">
-        <div class="day-head">
-          <span class="day-when">Mon 3 Aug · Home</span>
-          <span class="day-title">Airport — leave early</span>
-        </div>
+        <div class="day-head"><span class="day-when">Mon 3 Aug · Home</span><span class="day-title">Airport — leave early</span></div>
         <div class="day-body">
           <div class="row">
             <div class="when">Morning</div>
@@ -415,29 +324,31 @@
     <div class="extras">
       <div class="extra">
         <h3><span class="em">✨</span> See the Eiffel Tower sparkle</h3>
-        <p>Every night it glitters for five minutes on the hour — and in midsummer the first show is around <b>11 PM</b>. Your Thursday boat glides right past it. To catch the twinkle another night, watch from <span class="pick">Pont de Bir-Hakeim</span>, where the arches frame the tower and the crowds thin out.</p>
+        <p>Every night it glitters for five minutes on the hour — and in midsummer the first show is around <b>11 PM</b>. Your Thursday boat glides right past it. To catch the twinkle another night, watch from <a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Pont+de+Bir-Hakeim+75015+Paris" target="_blank" rel="noopener">Pont de Bir-Hakeim</a>, where the arches frame the tower and the crowds thin out.</p>
+        <span class="addr">Pont de Bir-Hakeim, 75015 Paris</span>
       </div>
       <div class="extra">
         <h3><span class="em">🥐</span> The croissant crawl</h3>
         <p>Three worth every calorie:</p>
         <ul>
-          <li><b>Tout Autour du Pain</b> — in the Marais, steps from home base. Your everyday spot.</li>
-          <li><b>La Maison d'Isabelle</b> — Latin Quarter, two minutes from Notre-Dame. Famously the best croissant in the city, and just €1.40 — grab one Sunday around Mass.</li>
-          <li><b>Du Pain et des Idées</b> — by the Canal Saint-Martin. A 24-hour-rise legend; pair it with a canal walk.</li>
+          <li><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Tout+Autour+du+Pain+134+Rue+de+Turenne+75003+Paris" target="_blank" rel="noopener">Tout Autour du Pain</a> — in the Marais, steps from home base. Your everyday spot.<span class="addr">134 Rue de Turenne, 75003 Paris</span></li>
+          <li><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=La+Maison+d+Isabelle+47ter+Boulevard+Saint-Germain+75005+Paris" target="_blank" rel="noopener">La Maison d'Isabelle</a> — two minutes from Notre-Dame. Famously the best croissant in the city, just €1.40 — grab one Sunday around Mass.<span class="addr">47ter Boulevard Saint-Germain, 75005 Paris</span></li>
+          <li><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Du+Pain+et+des+Idees+34+Rue+Yves+Toudic+75010+Paris" target="_blank" rel="noopener">Du Pain et des Idées</a> — by the Canal Saint-Martin. A 24-hour-rise legend; pair it with a canal walk.<span class="addr">34 Rue Yves Toudic, 75010 Paris</span></li>
         </ul>
       </div>
       <div class="extra">
         <h3><span class="em">🚶</span> Long walks, the right way</h3>
         <p>You love to walk — so do it when Paris is coolest: <b>before noon or after 6 PM</b>, never the 2 PM heat. The best routes:</p>
         <ul>
-          <li><b>Marais → Île Saint-Louis → Notre-Dame</b> along the river — your Sunday morning.</li>
-          <li><b>Berges de Seine</b>, the car-free riverbank, at golden hour.</li>
-          <li><b>Canal Saint-Martin</b> — leafy, local, and croissant-adjacent.</li>
+          <li><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Ile+Saint-Louis+75004+Paris" target="_blank" rel="noopener">Marais → Île Saint-Louis → Notre-Dame</a> along the river — your Sunday morning.<span class="addr">Île Saint-Louis, 75004 Paris</span></li>
+          <li><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Berges+de+Seine+Port+de+Solferino+75007+Paris" target="_blank" rel="noopener">Berges de Seine</a>, the car-free riverbank, at golden hour.<span class="addr">Port de Solférino, 75007 Paris</span></li>
+          <li><a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Canal+Saint-Martin+Quai+de+Valmy+75010+Paris" target="_blank" rel="noopener">Canal Saint-Martin</a> — leafy, local, and croissant-adjacent.<span class="addr">Quai de Valmy, 75010 Paris</span></li>
         </ul>
       </div>
       <div class="extra">
         <h3><span class="em">🍫</span> One sweet splurge</h3>
-        <p>A box of macarons from <span class="pick">Pierre Hermé</span> to split on a bench in the Place des Vosges. That's the whole activity.</p>
+        <p>A box of macarons from <a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Pierre+Herme+72+Rue+Bonaparte+75006+Paris" target="_blank" rel="noopener">Pierre Hermé</a> to split on a bench in the <a class="vlink" href="https://www.google.com/maps/search/?api=1&amp;query=Place+des+Vosges+75004+Paris" target="_blank" rel="noopener">Place des Vosges</a>. That's the whole activity.</p>
+        <span class="addr">Pierre Hermé: 72 Rue Bonaparte, 75006 · Place des Vosges, 75004</span>
       </div>
     </div>
   </section>
@@ -454,13 +365,13 @@
         <label class="check"><input type="checkbox" data-k="b3"><span class="step">4</span><span class="check-text"><span class="lead">Giverny entry — €13</span><span class="sub">claudemonetgiverny.fr · online quota</span></span></label>
         <label class="check"><input type="checkbox" data-k="b4"><span class="step">5</span><span class="check-text"><span class="lead">Vaux candlelit evening + dinner — €22</span><span class="sub">vaux-le-vicomte.com · after the return is confirmed</span></span></label>
         <label class="check"><input type="checkbox" data-k="b5"><span class="step">6</span><span class="check-text"><span class="lead">Notre-Dame bell towers — €16</span><span class="sub">monuments-nationaux.fr · optional</span></span></label>
-        <label class="check"><input type="checkbox" data-k="b6"><span class="step">7</span><span class="check-text"><span class="lead">Friday dinner with Maya</span><span class="sub">Pin the night, then book the table</span></span></label>
+        <label class="check"><input type="checkbox" data-k="b6"><span class="step">7</span><span class="check-text"><span class="lead">Friday drinks/dinner + Sunday lunch with Maya</span><span class="sub">Pin the spots from Maya's options, then book</span></span></label>
       </div>
 
       <div class="list-group">
         <div class="glabel">Message</div>
         <label class="check"><input type="checkbox" data-k="m0"><span class="step">·</span><span class="check-text"><span class="lead">Reply to Sarah &amp; Boris</span><span class="sub">Thank them for Thursday · confirm you'll stay with them · say yes to Square Trousseau · confirm the boat time · get their address</span></span></label>
-        <label class="check"><input type="checkbox" data-k="m1"><span class="step">·</span><span class="check-text"><span class="lead">Ask Maya</span><span class="sub">Friday night for drinks (or dinner); Sunday lunch as the backup</span></span></label>
+        <label class="check"><input type="checkbox" data-k="m1"><span class="step">·</span><span class="check-text"><span class="lead">Confirm with Maya</span><span class="sub">Friday night drinks + which of her long-lunch options for Sunday</span></span></label>
         <label class="check"><input type="checkbox" data-k="m2"><span class="step">·</span><span class="check-text"><span class="lead">Reach out to cousin Antoine</span><span class="sub">TBD — find a time to see him while you're in town</span></span></label>
       </div>
 
@@ -477,9 +388,7 @@
     <h2><span class="num">Part 4</span> Travel at a glance</h2>
     <div class="table-scroll">
       <table>
-        <thead>
-          <tr><th>Where</th><th>Distance</th><th>How</th><th>Cost / person</th><th>Ease</th></tr>
-        </thead>
+        <thead><tr><th>Where</th><th>Distance</th><th>How</th><th>Cost / person</th><th>Ease</th></tr></thead>
         <tbody>
           <tr><td><span class="place">Giverny</span><br>Fri</td><td>~75 km NW</td><td>Saint-Lazare → Vernon (50 min) + €5 shuttle</td><td>~€45–55<br>incl. €13 entry</td><td class="diff">🟢</td></tr>
           <tr><td><span class="place">Vaux-le-Vicomte</span><br>Sat</td><td>~55 km SE</td><td>Gare de Lyon → Melun (25 min) + Châteaubus</td><td>~€35<br>incl. €22 entry</td><td class="diff">🟡 late return</td></tr>
@@ -494,7 +403,7 @@
       <span id="ptext">0 of 12 done</span>
       <span class="bar"><span class="fill" id="pfill"></span></span>
     </div>
-    <p>Tap any checkbox to mark it done — this page remembers on your device. Prices are 2026 rates and may drift. Parked for next trip: Domaine de Primard 🌹</p>
+    <p>Tap a venue to open it in Google Maps · tap any checkbox to mark it done (this page remembers on your device). Red ↳ arrows are things still to decide. Prices are 2026 rates and may drift. Parked for next trip: Domaine de Primard 🌹</p>
     <div class="foot-mark">Diata Health</div>
   </footer>
 
